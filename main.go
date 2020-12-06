@@ -10,6 +10,6 @@ func main() {
 			PASS: "pass",
 		},
 	}
-	c := NewController(e)
+	c := InitController(e)
 	c.Start()
 }

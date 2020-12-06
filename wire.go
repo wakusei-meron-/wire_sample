@@ -1,4 +1,5 @@
 // +build wireinject
+
 package main
 
 import (
@@ -11,7 +12,7 @@ import (
 	"wire_sample/service"
 )
 
-func NewController(e env.Conf) controller.Controller {
+func InitController(e env.Conf) controller.Controller {
 	wire.Build(
 		db.OpenDB,
 		repository.NewRepository,

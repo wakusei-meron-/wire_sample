@@ -15,7 +15,7 @@ import (
 
 // Injectors from wire.go:
 
-func NewController(e env.Conf) controller.Controller {
+func InitController(e env.Conf) controller.Controller {
 	sqlDB := db.OpenDB(e)
 	repositoryRepository := repository.NewRepository(sqlDB)
 	serviceService := service.NewService(repositoryRepository)
